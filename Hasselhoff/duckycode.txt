@@ -5,11 +5,11 @@ GUI r
 DELAY 500
 STRING iexplore https://areyoukarl.com/wp-content/uploads/2019/04/Happys-Socks-x-David-Hasselhoff-washing-car.png
 ENTER
-Delay 2000
+DELAY 2000
 CONTROL s
 DELAY 100
-String C:\temp\h.png
-Enter
+STRING C:\temp\h.png
+ENTER
 DELAY 100
 CONTROL w
 DELAY 100
