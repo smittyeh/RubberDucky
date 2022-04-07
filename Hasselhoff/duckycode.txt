@@ -2,11 +2,23 @@ REM Replace your current desktop background with David Hasselhoff using powershe
 REM AUTHOR: SmittyEh 2022
 DELAY 1000
 GUI r
-DELAY 100
-STRING powershell -wget https://areyoukarl.com/wp-content/uploads/2019/04/Happys-Socks-x-David-Hasselhoff-washing-car.png -o %USERPROFILE%/Downloads/HH.png
+DELAY 500
+STRING iexplore https://areyoukarl.com/wp-content/uploads/2019/04/Happys-Socks-x-David-Hasselhoff-washing-car.png
 ENTER
-DELAY 1000
-STRING reg add HKEY_CURRENT_USER\Control Panel\Desktop /v Wallpaper /t REG_SZ /d C:\Users\cmsmith\Downloads\HH.png /f
+Delay 2000
+CONTROL s
+DELAY 100
+String C:\temp\h.png
+Enter
+DELAY 100
+CONTROL w
+DELAY 100
+GUI r
+DELAY 200
+STRING powershell
+ENTER
+DELAY 500
+STRING reg add HKEY_CURRENT_USER\Control Panel\Desktop /v Wallpaper /t REG_SZ /d C:\temp\h.png /f
 ENTER
 DELAY 100
 STRING RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
