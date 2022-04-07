@@ -3,12 +3,9 @@ REM AUTHOR: SmittyEh 2022
 DELAY 1000
 GUI r
 DELAY 100
-STRING cmd
+STRING powershell -wget https://areyoukarl.com/wp-content/uploads/2019/04/Happys-Socks-x-David-Hasselhoff-washing-car.png -o "%USERPROFILE%/Downloads/HH.png"
 ENTER
 DELAY 1000
-STRING powershell -wget https://areyoukarl.com/wp-content/uploads/2019/04/Happys-Socks-x-David-Hasselhoff-washing-car.png -o "%USERPROFILE%\Downloads/HH.png"
-ENTER
-DELAY 100
 STRING reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "C:\Users\cmsmith\Downloads\HH.png" /f
 ENTER
 DELAY 100
